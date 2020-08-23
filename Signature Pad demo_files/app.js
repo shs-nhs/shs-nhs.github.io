@@ -116,6 +116,7 @@ clearButton.addEventListener("click", function (event) {
   document.getElementById("frm1").reset();
 });
 
+/*
 saveJPGButton.addEventListener("click", function (event) {
   if (signaturePad.isEmpty()) {
     alert("Please provide a signature first.");
@@ -124,4 +125,4 @@ saveJPGButton.addEventListener("click", function (event) {
     download(dataURL, "signature.jpg");
   }
 });
-
+*/

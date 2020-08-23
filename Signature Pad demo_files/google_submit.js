@@ -44,7 +44,7 @@ $('#google-submit').click(function () {
   isLoading(true);
 
   $.ajax({
-    type: "GET",
+    type: "POST",
     url: "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
     data: {
       "First Name": inputFirstName.val(),
