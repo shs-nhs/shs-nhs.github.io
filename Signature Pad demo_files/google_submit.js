@@ -48,15 +48,13 @@ $('#google-submit').click(function () {
 
   $.ajax({
     type: "GET",
-    //url: "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
-    //url:   "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
     url: "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
     data: {
       "First Name": inputFirstName.val(),
       "Last Name": inputLastName.val(),
       "ID": (inputId.val()).toString(),
       "Hours": (inputHours.val()).toString(),
-      "Signature": signaturePad.toDataURL("image/jpeg"),
+      "Signature": "jpeg", //signaturePad.toDataURL("image/jpeg"),
     },
     success: function (response) {
       isLoading(false);
