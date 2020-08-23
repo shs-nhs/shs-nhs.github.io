@@ -43,9 +43,6 @@ $('#google-submit').click(function () {
 
   isLoading(true);
 
-  //var dataURL = signaturePad.toDataURL("image/jpeg");
-  //download(dataURL, "signature.jpg");
-
   $.ajax({
     type: "GET",
     url: "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
@@ -54,23 +51,16 @@ $('#google-submit').click(function () {
       "Last Name": inputLastName.val(),
       "ID": (inputId.val()).toString(),
       "Hours": (inputHours.val()).toString(),
-      "Signature": "jpeg", //signaturePad.toDataURL("image/jpeg"),
+      "Signature": signaturePad.toDataURL("image/jpeg"),
     },
     success: function (response) {
       isLoading(false);
 
-      //alert("Uploaded");
-      //snackbar.html('Uploaded.').addClass('show');
       setTimeout(function () {
         snackbar.removeClass('show');
       }, 3000);
 
       signaturePad.clear();
-
-      //Clear inputs
-      //inputName.val('');
-      //inputAge.val('');
-      //inputArea.val('');
     },
     error: function (request, status, error) {
       isLoading(false);
