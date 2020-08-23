@@ -61,6 +61,7 @@ $('#google-submit').click(function () {
       }, 3000);
 
       signaturePad.clear();
+      alert('Submitted!');
     },
     error: function (request, status, error) {
       isLoading(false);
