@@ -45,7 +45,8 @@ $('#google-submit').click(function () {
 
   $.ajax({
     type: "POST",
-    url: "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
+    //url: "https://script.google.com/macros/s/AKfycby4EtzWYLXdGYn9kAzbdDSbZElwqWV8TS3LGJM_HJMjZFSNxAvo/exec",
+    url: "https://script.google.com/macros/s/AKfycbzarmWaf3QOZ68_9neB49ckDzhPY4mECrBjdGQ4UR43yVCVIRKd/exec",
     data: {
       "First Name": inputFirstName.val(),
       "Last Name": inputLastName.val(),
