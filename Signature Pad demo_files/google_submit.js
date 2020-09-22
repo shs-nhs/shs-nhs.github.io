@@ -4,8 +4,8 @@ var snackbar = $('#snackbar');
 
 var inputFirstName = $('#fname');
 var inputLastName = $('#lname');
-var inputId = $('#iname');
-var inputHours = $('#hname');
+var inputTeacherFirstName = $('#tfname');
+var inputTeacherLastName = $('#tlname');
 
 function isLoading(status){
   if(status){
@@ -50,8 +50,8 @@ $('#google-submit').click(function () {
     data: {
       "First Name": inputFirstName.val(),
       "Last Name": inputLastName.val(),
-      "ID": (inputId.val()).toString(),
-      "Hours": (inputHours.val()).toString(),
+      "Teacher First Name": inputTeacherFirstName.val(),
+      "Teacher Last Name": inputTeacherLastName.val(),
       "Signature": signaturePad.toDataURL("image/jpeg"),
     },
     success: function (response) {
